@@ -1,0 +1,33 @@
+# config/database.yml
+---
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: 5
+  username: <%= Rails.application.credentials.database[:username] %>
+  password: <%= Rails.application.credentials.database[:password] %>
+  host: <%= ENV.fetch('DOCKER_DB_HOST', 'localhost') %>
+  port: <%= ENV.fetch('DOCKER_DEV_DB_PORT', 3306) %>
+
+development:
+  <<: *default
+  database: APPNAME_development
+  port: <%= ENV.fetch('DOCKER_DEV_DB_PORT', 3306) %>
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: APPNAME_test
+  port: <%= ENV.fetch('DOCKER_TEST_DB_PORT', 3306) %>
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  database: APPNAME_production
+  username: <%= Rails.application.credentials.database[:username] %>
+  password: <%= Rails.application.credentials.database[:password] %>
+  host: localhost
+  port: 3306
