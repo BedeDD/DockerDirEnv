@@ -1,8 +1,8 @@
 # DockerDirEnv
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/docker_dir_env`. To experiment with that code, run `bin/console` for an interactive prompt.
+I am using docker containers for development of a rails app as well as the environmental credentials. I figured that I'm adding the same three files to all of my projects. Since I have a bunch of existing projects a custom template is not an option. So I went with a gem and a generator instead.
 
-TODO: Delete this and the text above, and describe your gem
+I am pretty inexperienced with gem development. Tips are very welcome!
 
 ## Installation
 

@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ben@bdeutscher.org"]
 
   spec.summary       = %q{This gem brings a setup of docker management script, a database.yml and .envrc file.}
-  spec.description   = %q{I am using docker containers for development of a rails app as well as the environmental credentials. I figured that I'm adding the same three files to all of my projects. Since I have a bunch of existing projects a custom template is not an option. So I went with a gem and a generator instead. }
+  spec.description   = %q{I am using docker containers for development of a rails app as well as the environmental credentials. I figured that I'm adding the same three files to all of my projects. Since I have a bunch of existing projects a custom template is not an option. So I went with a gem and a generator instead.}
   spec.homepage      = "https://github.com/BedeDD/DockerDirEnv.git"
   spec.license       = "MIT"
 
