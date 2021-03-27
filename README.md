@@ -22,7 +22,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the installer:
+```
+rails g docker_dir_env:install
+```
+
+Provide credentials (`EDITOR=vim rails credentials:edit`) with the following structure:
+```
+database:
+  username: YOUR_USERNAME
+  password: YOUR_PASSWORD
+```
 
 ## Development
 
