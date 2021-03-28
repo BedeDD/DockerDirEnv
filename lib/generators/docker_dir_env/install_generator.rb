@@ -48,7 +48,7 @@ module DockerDirEnv
 
           Provide the following structure inside the credentials:
           database:
-            username: YOUR_USERNAME
+            username: #{Rails.application.class.name&.deconstantize&.underscore}_RAILS_ENV
             password: YOUR_PASSWORD
         README
       end
